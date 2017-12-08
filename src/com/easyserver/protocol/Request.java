@@ -5,6 +5,7 @@ package com.easyserver.protocol;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * 
@@ -13,22 +14,51 @@ import java.util.Map;
  */
 public class Request {
 
-	// 存放参数的容器
-	private Map<String, String> map = new HashMap<String, String>();
-
-	public String getParameter(String key) {
-		return map.get(key);
-	}
+	private final Map<String, Object> attributes = new ConcurrentHashMap<String, Object>();
 
 	/**
-	 * 存入参数
-	 * @param key
-	 * @param value
+	 * Path parameters
 	 */
-	public void addParameter(String key, String value) {
+	protected Map<String, String> pathParameters = new HashMap<String, String>();
 
-		map.put(key, value);
+	protected void addPathParameter(String name, String value) {
+		pathParameters.put(name, value);
+	}
 
+	public Object getAttribute(String name) {
+
+		Object attr = attributes.get(name);
+
+		if (attr != null) {
+			return (attr);
+		}
+
+		return null;
+
+	}
+
+	public void setAttribute(String name, Object value) {
+
+		// Null value is the same as removeAttribute()
+		if (value == null) {
+			removeAttribute(name);
+			return;
+		}
+
+		Object oldValue = attributes.put(name, value);
+
+	}
+
+	public void removeAttribute(String name) {
+		// Remove the specified attribute
+
+		boolean found = attributes.containsKey(name);
+		if (found) {
+			Object value = attributes.get(name);
+			attributes.remove(name);
+		} else {
+			return;
+		}
 	}
 
 }

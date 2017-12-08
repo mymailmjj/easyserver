@@ -2,7 +2,6 @@ package com.easyserver.server;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
-import java.net.Socket;
 import java.nio.ByteBuffer;
 import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
@@ -41,6 +40,7 @@ public class Server {
 		httpProtocolProcessor = new HttpProtocolProcessor();
 
 		try {
+			
 			ServerSocketChannel serverSocketChannel = ServerSocketChannel
 					.open();
 
