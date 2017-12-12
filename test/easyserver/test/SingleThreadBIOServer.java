@@ -27,7 +27,6 @@ public class SingleThreadBIOServer {
 
 		Random random;
 
-		@Override
 		public void run() {
 			try {
 				System.out.println("启动单线程bio服务器..........");
