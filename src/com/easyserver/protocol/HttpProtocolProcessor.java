@@ -3,10 +3,8 @@
  */
 package com.easyserver.protocol;
 
-import java.net.Socket;
 import java.nio.channels.SocketChannel;
 
-import com.easyserver.base.NioChannel;
 import com.easyserver.base.SocketWapper;
 
 /**
@@ -15,14 +13,14 @@ import com.easyserver.base.SocketWapper;
  */
 public class HttpProtocolProcessor {
 	
+	private HttpRequestHandler<SocketChannel> httpRequestHandler = new HttpRequestHandler<SocketChannel>();
 	
-	public void process(SocketWapper<NioChannel> socketWapper){
+	public void process(SocketWapper<SocketChannel> socketWapper){
 		
-		NioChannel t = socketWapper.getT();
+		HttpRequest httpRequest = new HttpRequest();
 		
-		SocketChannel socketChannel = t.getSocketChannel();
+		httpRequestHandler.parseRequest(socketWapper, httpRequest);
 	
 	}
-	
 
 }

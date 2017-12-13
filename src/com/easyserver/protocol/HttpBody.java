@@ -7,33 +7,43 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * @author mujjiang
+ * 请求体,也是key-value形式
+ * @author cango
  *
  */
-public class HttpHeader {
-	
+public class HttpBody {
 	
 	/**
 	 * 默认没有初始化
 	 */
 	private boolean isInitialized = false;
 	
-	
-	public HttpHeader(boolean isInitialized, Map<String, String> header) {
-		super();
-		this.isInitialized = isInitialized;
-		this.header = header;
+
+	public boolean isInitialized() {
+		return isInitialized;
 	}
 
-	public Map<String,String> header = new ConcurrentHashMap<String, String>();
+	public void setInitialized(boolean isInitialized) {
+		this.isInitialized = isInitialized;
+	}
 
+	public Map<String, String> getBody() {
+		return body;
+	}
+
+	public void setBody(Map<String, String> body) {
+		this.body = body;
+	}
+
+	public Map<String,String> body = new ConcurrentHashMap<String, String>();
+	
 	/**
 	 * 添加入头信息
 	 * @param key
 	 * @param value
 	 */
 	public void addHeader(String key,String value){
-		header.put(key, value);
+		body.put(key, value);
 	}
 	
 	/**
@@ -43,7 +53,7 @@ public class HttpHeader {
 	 * @return
 	 */
 	public String getHeaderValue(String key){
-		return header.get(key);
+		return body.get(key);
 	}
 	
 }

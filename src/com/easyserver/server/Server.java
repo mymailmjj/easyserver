@@ -2,7 +2,6 @@ package com.easyserver.server;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
-import java.nio.ByteBuffer;
 import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.nio.channels.ServerSocketChannel;
@@ -17,7 +16,6 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-import com.easyserver.base.NioChannel;
 import com.easyserver.base.SocketWapper;
 import com.easyserver.protocol.HttpProtocolProcessor;
 
@@ -34,8 +32,10 @@ public class Server {
 	}
 
 	public void start() {
+		
+		System.out.println("server start ....");
 
-		newFixedThreadPool = Executors.newFixedThreadPool(5);
+		newFixedThreadPool = Executors.newFixedThreadPool(10);
 		
 		httpProtocolProcessor = new HttpProtocolProcessor();
 
@@ -99,13 +99,9 @@ public class Server {
 						SelectionKey key = iterator.next();
 
 						if (key.isAcceptable()) {
-							System.out.println(Thread.currentThread().getName()
-									+ "线程:key:" + key + "\taccept");
 							hanleAccept(key);
 
 						} else if (key.isReadable()) {
-							System.out.println(Thread.currentThread().getName()
-									+ "线程:key:" + key + "\tread");
 							hanleRead(key);
 						}
 
@@ -144,14 +140,17 @@ public class Server {
 	}
 
 	public void hanleRead(SelectionKey key) {
-		try {
+//		try {
+		
 			SocketChannel socketChannel = (SocketChannel) key.channel();
+			
+			SocketProcessor socetProcessor = new SocketProcessor(socketChannel);
+			
+			newFixedThreadPool.execute(socetProcessor);
 
-			ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
+		/*	ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
 
 			int index = socketChannel.read(byteBuffer);
-
-			System.out.print("输入:");
 
 			while (index > 0) {
 
@@ -177,7 +176,7 @@ public class Server {
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
-		}
+		}*/
 	}
 	
 	
@@ -192,9 +191,7 @@ public class Server {
 
 		public void run() {
 			
-			NioChannel nioChannel = new NioChannel(socketChannel);
-			
-			SocketWapper<NioChannel> nioSocketWapper = new SocketWapper<NioChannel>(nioChannel);
+			SocketWapper<SocketChannel> nioSocketWapper = new SocketWapper<SocketChannel>(socketChannel);
 			
 			httpProtocolProcessor.process(nioSocketWapper);
 			
