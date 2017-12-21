@@ -38,13 +38,15 @@ import javax.net.ssl.TrustManagerFactory;
  * @author cango
  * 
  */
-public class SSLNioServer {
+public class SSLNioClient {
 
 	private int port;
 
 	private SSLContext sslContext;
 
 	private SSLEngine sslEngine;
+	
+	private SocketChannel socketChannel;
 
 	private CharsetEncoder encoder = Charset.forName("UTF8").newEncoder();
 	private CharsetDecoder decoder = Charset.forName("UTF8").newDecoder();
@@ -54,7 +56,7 @@ public class SSLNioServer {
 	private ByteBuffer netOut; // encrypted buffer for out
 	private ByteBuffer netIn; // encrypted buffer for in
 
-	public SSLNioServer(int port) {
+	public SSLNioClient(int port) {
 		this.port = port;
 
 	}
@@ -69,26 +71,61 @@ public class SSLNioServer {
 
 		createBuffers();
 
-		try {
-			select();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+//			select();
+			select1();
 
+	}
+
+	private void select1() {
+		
+		boolean fa = false;
+		
+		while(true){
+			
+			try {
+				if(selector.select()==0){
+					continue;
+				}
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			Set<SelectionKey> selectedKeys = selector.selectedKeys();
+			
+			Iterator<SelectionKey> iterator = selectedKeys.iterator();
+			
+			while(iterator.hasNext()){
+				
+				SelectionKey next = iterator.next();
+				
+				if(next.isConnectable()) {
+					System.out.println("ke lianjie");
+					fa = true;
+					break;
+				}
+				
+			}
+			
+			if(fa) break;
+			
+		}
+		
 	}
 
 	private Selector selector;
 
 	private void createSocketChannel() {
 
-		ServerSocketChannel serverSocketChannel;
 
 		try {
-			serverSocketChannel = ServerSocketChannel.open();
+			socketChannel = SocketChannel.open();
 			selector = Selector.open();
-			serverSocketChannel.configureBlocking(false);
-			serverSocketChannel.bind(new InetSocketAddress(8443));
-			serverSocketChannel.register(selector, SelectionKey.OP_ACCEPT);
+			socketChannel.connect(new InetSocketAddress(8443));
+			socketChannel.configureBlocking(false);
+			socketChannel.register(selector, SelectionKey.OP_CONNECT);
+			
+			
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -98,7 +135,7 @@ public class SSLNioServer {
 		SSLSession session = sslEngine.getSession();
 		int appBufferMax = session.getApplicationBufferSize();
 		int netBufferMax = session.getPacketBufferSize();
-
+		
 		appOut = ByteBuffer.wrap("HTTP/1.1 200 OK \r\n".getBytes());// server
 																	// only
 																	// reply
@@ -116,12 +153,6 @@ public class SSLNioServer {
 
 	private void select() throws IOException {
 
-		while (true) {
-
-			while (selector.select(2000) == 0) {
-				System.out.println("====");
-				continue;
-			}
 
 			// 进入处理程序
 
@@ -135,13 +166,11 @@ public class SSLNioServer {
 
 				System.out.println(key + "\t" + key.isWritable() + "writekey");
 
-				if (key.isAcceptable()) {
+				if (key.isConnectable()) {
 
-					ServerSocketChannel channel = (ServerSocketChannel) key.channel();
+					SocketChannel socketChannel = (SocketChannel) key.channel();
 
-					channel.configureBlocking(false);
-
-					SocketChannel socketChannel = channel.accept();
+					socketChannel.configureBlocking(false);
 
 					doShakeHand(socketChannel);
 
@@ -201,8 +230,6 @@ public class SSLNioServer {
 
 				iterator.remove(); // 处理完毕删除
 			}
-
-		}
 
 	}
 
@@ -426,7 +453,7 @@ public class SSLNioServer {
 
 	private void createSSLEngine() {
 		SSLEngine sslEngine = sslContext.createSSLEngine();
-		sslEngine.setUseClientMode(false);
+		sslEngine.setUseClientMode(true);
 		sslEngine.setNeedClientAuth(true);
 		this.sslEngine = sslEngine;
 
@@ -434,7 +461,7 @@ public class SSLNioServer {
 
 	public static void main(String[] args) {
 
-		SSLNioServer sslNioServer = new SSLNioServer(8443);
+		SSLNioClient sslNioServer = new SSLNioClient(8443);
 
 		sslNioServer.startServer();
 
