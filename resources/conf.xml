@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+   <!-- 虚拟机类 -->
+	<jvm>
+		
+	</jvm>
+	<!-- 线程类 -->
+	<protocol type="" maxthread=""/>
+</config>
+
+
