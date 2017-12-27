@@ -10,6 +10,7 @@ import java.net.MulticastSocket;
 import java.util.concurrent.TimeUnit;
 
 /**
+ * 这个是组播的原理测试案例
  * @author cango
  * 
  */

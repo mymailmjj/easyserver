@@ -5,6 +5,7 @@ package multicast;
 
 
 /**
+ * 组播节点1
  * @author cango
  * 
  */
