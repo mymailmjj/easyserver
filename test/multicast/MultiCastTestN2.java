@@ -16,7 +16,7 @@ public class MultiCastTestN2 {
 	 */
 	public static void main(String[] args) {
 
-		MutiCastServer multCastServer = new MutiCastServer(8085,"node2");
+		MultiCastServer multCastServer = new MultiCastServer(8085,"node2");
 		
 		multCastServer.start();
 
