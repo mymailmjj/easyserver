@@ -113,8 +113,6 @@ public class SSLClient {
 			while((str = bufferedReader.readLine())!=null){
 				System.out.println("read str form server:"+str);
 			}
-					
-		
 			
 			bufferedReader.close();
 			
