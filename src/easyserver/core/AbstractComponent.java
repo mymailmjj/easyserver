@@ -3,13 +3,14 @@
  */
 package easyserver.core;
 
+import easyserver.lifecycle.LifeCycleBase;
 import easyserver.status.ComponentStatus;
 
 /**
  * @author cango
  * 
  */
-public abstract class AbstractComponent implements Component {
+public abstract class AbstractComponent extends LifeCycleBase {
 
 	protected ComponentStatus componentStatus;
 
@@ -19,12 +20,23 @@ public abstract class AbstractComponent implements Component {
 
 	protected abstract void initComponent();
 
-	public void start() {
+    @Override
+    protected void init_inner() {
+        // TODO Auto-generated method stub
+        
+    }
 
-	}
+    @Override
+    protected void start_inner() {
+        // TODO Auto-generated method stub
+        
+    }
 
-	public void stop() {
+    @Override
+    protected void stop_inner() {
+        // TODO Auto-generated method stub
+        
+    }
 
-	}
 
 }
