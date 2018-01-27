@@ -12,9 +12,5 @@ import easyserver.core.AbstractComponent;
  */
 public abstract class Protocol extends AbstractComponent{
 
-	@Override
-	protected void initComponent() {
-		
-	}
 
 }

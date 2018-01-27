@@ -18,9 +18,5 @@ public class AbstractProtocolHandler extends AbstractComponent implements Protoc
 
 	}
 
-	@Override
-	protected void initComponent() {
-		
-	}
 
 }

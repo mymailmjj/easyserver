@@ -9,7 +9,7 @@ package easyserver.lifecycle;
  */
 public abstract class LifeCycleBase implements LifeCycle {
     
-    protected LifeCycleStatus lifeCycleStatus;
+    protected LifeCycleStatus lifeCycleStatus = LifeCycleStatus.NEW;   //刚开始默认是new的状态
     
     public LifeCycleStatus getLifeCycleStatus() {
         return lifeCycleStatus;
@@ -38,7 +38,11 @@ public abstract class LifeCycleBase implements LifeCycle {
      */
     public void start() {
         if(!this.lifeCycleStatus.equals(LifeCycleStatus.NEW)){
-            
+            try {
+                throw new IllegalAccessException("状态异常");
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
+            }
         }
         
         if(this.lifeCycleStatus.equals(LifeCycleStatus.NEW)){
