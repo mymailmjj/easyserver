@@ -3,6 +3,7 @@
  */
 package easyserver.connector;
 
+import easyserver.handler.Handler;
 import easyserver.server.StandardServer;
 
 /**

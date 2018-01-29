@@ -17,6 +17,13 @@ import java.util.Set;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import easyserver.handler.ByteHandler;
+import easyserver.handler.Handler;
+import easyserver.handler.Http11Handler;
+import easyserver.handler.RequestHandler;
+import easyserver.handler.ResponseHandler;
+import easyserver.handler.ServletHandler;
+
 /**
  * @author cango
  * 
@@ -26,6 +33,8 @@ public class StandardServer extends AbstractServer {
     Logger logger = LoggerFactory.getLogger(StandardServer.class);
     
     private final static int BUFFER_SIZE = 1024;
+    
+    private Handler handler;
 
     public void handleAccept(SelectionKey key) throws IOException {
         ServerSocketChannel ssChannel = (ServerSocketChannel) key.channel();
@@ -131,6 +140,7 @@ public class StandardServer extends AbstractServer {
     @Override
     protected void init_inner() {
         try {
+            
             ServerSocketChannel serverSocketChannel = ServerSocketChannel.open();
 
             serverSocketChannel.bind(new InetSocketAddress(this.port));
@@ -153,6 +163,28 @@ public class StandardServer extends AbstractServer {
         Thread thread = new Thread(new Acceptor());
         thread.setDaemon(true);
         thread.start();
+    }
+
+    @Override
+    protected void createHandler() {
+        ByteHandler byteHandler = new ByteHandler();
+        RequestHandler requestHandler = new RequestHandler();
+        Http11Handler http11Handler = new Http11Handler();
+        ServletHandler servletHandler = new ServletHandler();
+        ResponseHandler responseHandler = new ResponseHandler();
+        
+        byteHandler.setNext(requestHandler);
+        requestHandler.setNext(http11Handler);
+        http11Handler.setNext(servletHandler);
+        http11Handler.setNext(responseHandler);
+        
+        this.handler = byteHandler;
+        
+    }
+
+    @Override
+    protected void invokeHandler(Object o) {
+        this.handler.heandle(o);
     }
 
 }
