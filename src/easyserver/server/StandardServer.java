@@ -46,8 +46,11 @@ public class StandardServer extends AbstractServer {
 
     public void handleRead(SelectionKey key) throws IOException {
         SocketChannel sc = (SocketChannel) key.channel();
-        ByteBuffer buf = (ByteBuffer) key.attachment();
-        int bytesRead = sc.read(buf);
+        ByteBuffer buf1 = (ByteBuffer) key.attachment();
+        
+        Object o = invokeHandler(buf1);
+        
+       /* int bytesRead = sc.read(buf);
         while (bytesRead > 0) {
             byte[] r = new byte[bytesRead];
             buf.flip();
@@ -57,22 +60,25 @@ public class StandardServer extends AbstractServer {
             logger.info(new String(r));
             buf.compact();
             bytesRead = sc.read(buf);
-        }
+        }*/
         
         
         //"HTTP/1.1 200 OK \r\n"
         
-        buf.put("HTTP/1.1 200 OK \r\n".getBytes());
-        buf.flip();
+        ByteBuffer buf = (ByteBuffer)o;
+        
         while(buf.hasRemaining()){
             sc.write(buf);
         }
         buf.compact();
         
     //  这个代码结束
-      if (bytesRead <= 0) {
+    /*  if (bytesRead <= 0) {
             sc.close();
-        }
+        }*/
+        
+        sc.close();
+        
     }
 
     public void handleWrite(SelectionKey key) throws IOException {
@@ -86,6 +92,25 @@ public class StandardServer extends AbstractServer {
     }
     
     
+    
+    
+    @Override
+    protected void start_inner() {
+        super.start_inner();
+        Thread thread = new Thread(new Acceptor());
+        thread.setDaemon(true);
+        thread.start();
+    }
+
+    @Override
+    protected void stop_inner() {
+        // TODO Auto-generated method stub
+        super.stop_inner();
+    }
+
+
+
+
     class Acceptor implements Runnable{
         
         public void run() {
@@ -150,19 +175,14 @@ public class StandardServer extends AbstractServer {
             selector = Selector.open();
 
             serverSocketChannel.register(selector, SelectionKey.OP_ACCEPT);
+            
+            createHandler();
+            
         } catch (ClosedChannelException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-    @Override
-    public void start() {
-        super.start();
-        Thread thread = new Thread(new Acceptor());
-        thread.setDaemon(true);
-        thread.start();
     }
 
     @Override
@@ -176,15 +196,15 @@ public class StandardServer extends AbstractServer {
         byteHandler.setNext(requestHandler);
         requestHandler.setNext(http11Handler);
         http11Handler.setNext(servletHandler);
-        http11Handler.setNext(responseHandler);
+        servletHandler.setNext(responseHandler);
         
         this.handler = byteHandler;
         
     }
 
     @Override
-    protected void invokeHandler(Object o) {
-        this.handler.heandle(o);
+    protected Object invokeHandler(Object o) {
+        return this.handler.heandle(o);
     }
 
 }

@@ -3,11 +3,18 @@
  */
 package easyserver.handler;
 
+import java.nio.ByteBuffer;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
  * @author cango
  *
  */
 public class ResponseHandler extends AbstractHandler {
+    
+    Logger logger = LoggerFactory.getLogger(ResponseHandler.class);
 
     /* (non-Javadoc)
      * @see easyserver.handler.Handler#canHandle(java.lang.Object)
@@ -18,9 +25,13 @@ public class ResponseHandler extends AbstractHandler {
     }
 
     @Override
-    public Object innerhandle(Object o) {
+    public Object heandle(Object o) {
         
-        return null;
+        logger.info(this.getClass()+"\tprint:"+o);
+        
+        ByteBuffer buffer = ByteBuffer.wrap("HTTP/1.1 200 OK \r\n".getBytes());
+        
+        return buffer;
     }
 
 

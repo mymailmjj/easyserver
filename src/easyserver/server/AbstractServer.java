@@ -17,7 +17,7 @@ public abstract class AbstractServer extends AbstractComponent implements Server
 
 	protected Handler heaHandler;
 	
-	protected abstract void invokeHandler(Object o);
+	protected abstract Object invokeHandler(Object o);
 	
 	protected abstract void createHandler();
 

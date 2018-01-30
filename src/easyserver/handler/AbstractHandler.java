@@ -31,10 +31,15 @@ public abstract class AbstractHandler implements Handler {
         }
     }
     
-    public abstract Object innerhandle(Object o);
+    protected Object innerhandle(Object o){
+        
+        return o;
+        
+    }
 
     public void setNext(Handler next) {
        this.next = next;
     }
+    
 
 }

@@ -3200,4 +3200,196 @@ User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_151)
  INFO 2018-01-29 16:13:09- (StandardServer.java:98) ========== 
  INFO 2018-01-29 16:13:11- (StandardServer.java:98) ========== 
  INFO 2018-01-29 16:13:13- (StandardServer.java:98) ========== 
+ INFO 2018-01-30 10:48:53- (StandardServer.java:98) ========== 
+ INFO 2018-01-30 10:48:55- (StandardServer.java:98) ========== 
+ INFO 2018-01-30 11:00:36- (StandardServer.java:101) ========== 
+ INFO 2018-01-30 11:00:38- (StandardServer.java:101) ========== 
+ INFO 2018-01-30 11:00:40- (StandardServer.java:101) ========== 
+ INFO 2018-01-30 11:00:42- (StandardServer.java:101) ========== 
+ INFO 2018-01-30 11:00:44- (StandardServer.java:101) ========== 
+ INFO 2018-01-30 11:00:46- (StandardServer.java:101) ========== 
+ INFO 2018-01-30 11:00:48- (StandardServer.java:101) ========== 
+ INFO 2018-01-30 11:00:50- (StandardServer.java:101) ========== 
+ INFO 2018-01-30 11:00:52- (StandardServer.java:101) ========== 
+ INFO 2018-01-30 11:00:54- (StandardServer.java:101) ========== 
+ INFO 2018-01-30 11:00:56- (StandardServer.java:101) ========== 
+ INFO 2018-01-30 11:02:17- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:02:19- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:02:21- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:02:23- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:02:25- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:02:27- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:02:29- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:02:31- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:02:33- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:02:35- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:02:37- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:03:51- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:03:53- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:03:55- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:03:57- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:03:59- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:04:01- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:04:03- (ByteHandler.java:31) class easyserver.handler.ByteHandlerprint:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:04:52- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:04:54- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:04:56- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:04:58- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:05:00- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:05:02- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:05:04- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:05:06- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:05:08- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:05:10- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:05:12- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:05:14- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:05:16- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:05:18- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:05:35- (ByteHandler.java:31) class easyserver.handler.ByteHandlerprint:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:17:35- (StandardServer.java:106) ========== 
+ INFO 2018-01-30 11:17:37- (StandardServer.java:106) ========== 
+ INFO 2018-01-30 11:17:39- (StandardServer.java:106) ========== 
+ INFO 2018-01-30 11:17:41- (StandardServer.java:106) ========== 
+ INFO 2018-01-30 11:17:43- (StandardServer.java:106) ========== 
+ INFO 2018-01-30 11:17:45- (StandardServer.java:106) ========== 
+ INFO 2018-01-30 11:17:47- (StandardServer.java:106) ========== 
+ INFO 2018-01-30 11:17:49- (StandardServer.java:106) ========== 
+ INFO 2018-01-30 11:17:51- (StandardServer.java:106) ========== 
+ INFO 2018-01-30 11:17:51- (ByteHandler.java:31) class easyserver.handler.ByteHandlerprint:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:17:51- (ByteHandler.java:31) class easyserver.handler.ByteHandlerprint:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:17:51- (ByteHandler.java:31) class easyserver.handler.ByteHandlerprint:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:17:51- (ByteHandler.java:31) class easyserver.handler.ByteHandlerprint:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:17:51- (ByteHandler.java:31) class easyserver.handler.ByteHandlerprint:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:17:51- (ByteHandler.java:31) class easyserver.handler.ByteHandlerprint:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:17:51- (ByteHandler.java:31) class easyserver.handler.ByteHandlerprint:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:17:51- (ByteHandler.java:31) class easyserver.handler.ByteHandlerprint:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:17:51- (ByteHandler.java:31) class easyserver.handler.ByteHandlerprint:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:17:51- (ByteHandler.java:31) class easyserver.handler.ByteHandlerprint:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:17:53- (StandardServer.java:106) ========== 
+ INFO 2018-01-30 11:17:55- (StandardServer.java:106) ========== 
+ INFO 2018-01-30 11:17:57- (StandardServer.java:106) ========== 
+ INFO 2018-01-30 11:17:59- (StandardServer.java:106) ========== 
+ INFO 2018-01-30 11:18:01- (StandardServer.java:106) ========== 
+ INFO 2018-01-30 11:18:03- (StandardServer.java:106) ========== 
+ INFO 2018-01-30 11:20:14- (StandardServer.java:105) ========== 
+ INFO 2018-01-30 11:20:16- (StandardServer.java:105) ========== 
+ INFO 2018-01-30 11:20:18- (StandardServer.java:105) ========== 
+ INFO 2018-01-30 11:20:20- (StandardServer.java:105) ========== 
+ INFO 2018-01-30 11:20:22- (StandardServer.java:105) ========== 
+ INFO 2018-01-30 11:20:22- (ByteHandler.java:31) class easyserver.handler.ByteHandlerprint:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:20:22- (ByteHandler.java:31) class easyserver.handler.ByteHandlerprint:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:20:22- (ByteHandler.java:31) class easyserver.handler.ByteHandlerprint:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:20:22- (ByteHandler.java:31) class easyserver.handler.ByteHandlerprint:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:20:22- (ByteHandler.java:31) class easyserver.handler.ByteHandlerprint:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:20:22- (ByteHandler.java:31) class easyserver.handler.ByteHandlerprint:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:20:22- (ByteHandler.java:31) class easyserver.handler.ByteHandlerprint:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:20:22- (ByteHandler.java:31) class easyserver.handler.ByteHandlerprint:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:20:22- (ByteHandler.java:31) class easyserver.handler.ByteHandlerprint:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:20:22- (ByteHandler.java:31) class easyserver.handler.ByteHandlerprint:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:20:24- (StandardServer.java:105) ========== 
+ INFO 2018-01-30 11:20:26- (StandardServer.java:105) ========== 
+ INFO 2018-01-30 11:20:28- (StandardServer.java:105) ========== 
+ INFO 2018-01-30 11:20:30- (StandardServer.java:105) ========== 
+ INFO 2018-01-30 11:20:32- (StandardServer.java:105) ========== 
+ INFO 2018-01-30 11:20:34- (StandardServer.java:105) ========== 
+ INFO 2018-01-30 11:21:18- (StandardServer.java:105) ========== 
+ INFO 2018-01-30 11:21:20- (StandardServer.java:105) ========== 
+ INFO 2018-01-30 11:21:22- (StandardServer.java:105) ========== 
+ INFO 2018-01-30 11:21:24- (StandardServer.java:105) ========== 
+ INFO 2018-01-30 11:21:26- (StandardServer.java:105) ========== 
+ INFO 2018-01-30 11:21:28- (StandardServer.java:105) ========== 
+ INFO 2018-01-30 11:21:30- (StandardServer.java:105) ========== 
+ INFO 2018-01-30 11:21:37- (ByteHandler.java:31) class easyserver.handler.ByteHandlerprint:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:22:12- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:22:14- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:22:16- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:22:17- (ByteHandler.java:31) class easyserver.handler.ByteHandlerprint:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:22:19- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:22:21- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:22:23- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:22:25- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:22:25- (ByteHandler.java:31) class easyserver.handler.ByteHandlerprint:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:22:27- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:22:29- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:22:31- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:22:33- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:22:35- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:22:35- (ByteHandler.java:31) class easyserver.handler.ByteHandlerprint:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:22:35- (ByteHandler.java:31) class easyserver.handler.ByteHandlerprint:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:22:35- (ByteHandler.java:31) class easyserver.handler.ByteHandlerprint:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:22:35- (ByteHandler.java:31) class easyserver.handler.ByteHandlerprint:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:22:35- (ByteHandler.java:31) class easyserver.handler.ByteHandlerprint:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:22:35- (ByteHandler.java:31) class easyserver.handler.ByteHandlerprint:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:22:36- (ByteHandler.java:31) class easyserver.handler.ByteHandlerprint:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:22:36- (ByteHandler.java:31) class easyserver.handler.ByteHandlerprint:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:22:36- (ByteHandler.java:31) class easyserver.handler.ByteHandlerprint:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:22:36- (ByteHandler.java:31) class easyserver.handler.ByteHandlerprint:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:22:38- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:22:40- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:22:42- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:22:44- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:26:04- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:26:06- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:26:08- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:26:10- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:26:12- (ByteHandler.java:31) class easyserver.handler.ByteHandlerprint:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:26:14- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:26:16- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:26:16- (ByteHandler.java:31) class easyserver.handler.ByteHandlerprint:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:26:18- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:26:20- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:26:22- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:26:24- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:26:26- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:26:28- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:26:30- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:26:32- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:26:33- (ByteHandler.java:31) class easyserver.handler.ByteHandlerprint:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:26:35- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:26:37- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:27:30- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:27:32- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:27:34- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:27:49- (ByteHandler.java:31) class easyserver.handler.ByteHandlerprint:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:29:00- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:29:02- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:29:04- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:29:06- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:29:06- (ByteHandler.java:31) class easyserver.handler.ByteHandlerprint:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:29:06- (ResponseHandler.java:30) class easyserver.handler.ResponseHandlerprint:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:29:08- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:29:10- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:29:12- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:29:14- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:30:45- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:30:47- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:30:49- (ByteHandler.java:31) class easyserver.handler.ByteHandler	print:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:30:49- (ResponseHandler.java:30) class easyserver.handler.ResponseHandler	print:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:30:51- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:30:53- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:31:21- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:31:23- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:31:24- (ByteHandler.java:31) class easyserver.handler.ByteHandler	print:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:31:24- (ServletHandler.java:32) class easyserver.handler.ServletHandler	print:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:31:24- (ResponseHandler.java:30) class easyserver.handler.ResponseHandler	print:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:31:26- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:31:27- (ByteHandler.java:31) class easyserver.handler.ByteHandler	print:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:31:27- (ServletHandler.java:32) class easyserver.handler.ServletHandler	print:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:31:27- (ResponseHandler.java:30) class easyserver.handler.ResponseHandler	print:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:31:29- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:31:31- (StandardServer.java:104) ========== 
+ INFO 2018-01-30 11:33:15- (StandardServer.java:123) ========== 
+ INFO 2018-01-30 11:33:17- (StandardServer.java:123) ========== 
+ INFO 2018-01-30 11:33:19- (StandardServer.java:123) ========== 
+ INFO 2018-01-30 11:33:21- (StandardServer.java:123) ========== 
+ INFO 2018-01-30 11:33:21- (ByteHandler.java:31) class easyserver.handler.ByteHandler	print:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:33:21- (ServletHandler.java:32) class easyserver.handler.ServletHandler	print:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:33:21- (ResponseHandler.java:30) class easyserver.handler.ResponseHandler	print:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:33:23- (StandardServer.java:123) ========== 
+ INFO 2018-01-30 11:33:23- (ByteHandler.java:31) class easyserver.handler.ByteHandler	print:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:33:23- (ServletHandler.java:32) class easyserver.handler.ServletHandler	print:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:33:23- (ResponseHandler.java:30) class easyserver.handler.ResponseHandler	print:java.nio.DirectByteBuffer[pos=0 lim=1024 cap=1024] 
+ INFO 2018-01-30 11:33:25- (StandardServer.java:123) ========== 
+ INFO 2018-01-30 11:33:27- (StandardServer.java:123) ========== 
+ INFO 2018-01-30 11:33:29- (StandardServer.java:123) ========== 
  

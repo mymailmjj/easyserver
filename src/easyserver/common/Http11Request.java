@@ -5,6 +5,9 @@ package easyserver.common;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
+
+import easyserver.session.Session;
 
 /**
  * @author cango
@@ -19,7 +22,6 @@ public class Http11Request extends AbstractRequest {
     public String getReqeustUrl() {
         return http11RequestLine.getRequestUrl();
     }
-    
     
     /**
      * 解析的header头消息
@@ -40,7 +42,14 @@ public class Http11Request extends AbstractRequest {
     public void setSession(Session session) {
         this.session = session;
     }
-    
-    
+
+    public Set<String> getParamaterNames() {
+        return attribute.keySet();
+    }
+
+
+    public String getParameterValue(String name) {
+        return attribute.get(name);
+    }
 
 }
